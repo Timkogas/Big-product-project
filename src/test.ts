@@ -1,4 +1,4 @@
 export const someFn = (arg: number):string => {
-  console.log('test')
+  console.log('testфывфыв')
   return ''
 }
