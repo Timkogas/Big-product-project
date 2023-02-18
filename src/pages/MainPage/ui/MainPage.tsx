@@ -5,7 +5,6 @@ function MainPage () {
   return (
       <div>
           <h1>{t('Главная страница')}</h1>
-          <p>{t('Слово')}</p>
       </div>
   )
 }
