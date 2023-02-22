@@ -10,7 +10,7 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: 'en',
-    debug: __IS_DEV__,
+    debug: _IS_DEV_,
 
     interpolation: {
       escapeValue: false // Not needed for react as it escapes by default
@@ -20,5 +20,6 @@ i18n
       loadPath: '/locales/{{lng}}/{{ns}}.json'
     }
   })
+  .catch(e => { console.log(e) })
 
 export default i18n

@@ -1,3 +1,4 @@
+import type { FC } from 'react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
@@ -10,11 +11,11 @@ interface SidebarProps {
   className?: string
 }
 
-export const Sidebar = ({ className }: SidebarProps) => {
+export const Sidebar: FC<SidebarProps> = ({ className }) => {
   const [collapsed, setCollapsed] = useState(false)
   const { t } = useTranslation()
 
-  const onToggle = () => {
+  const onToggle = (): void => {
     setCollapsed(prev => !prev)
   }
 

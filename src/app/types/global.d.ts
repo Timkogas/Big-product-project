@@ -14,4 +14,4 @@ declare module '*.svg' {
   export default SVG
 }
 
-declare const __IS_DEV__: boolean
+declare const _IS_DEV_: boolean

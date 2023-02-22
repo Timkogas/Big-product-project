@@ -41,13 +41,12 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         '@typescript-eslint/strict-boolean-expressions': 'warn',
-        '@typescript-eslint/explicit-function-return-type': 'off',
-        '@typescript-eslint/no-floating-promises': 'off',
-        '@typescript-eslint/naming-convention': 'off',
+        "@typescript-eslint/no-misused-promises": "off",
         'i18next/no-literal-string': ['error', {markupOnly: true,  ignoreAttribute: ["to"]}]
+
     },
     globals: {
-        '__IS_DEV__': true
+        _IS_DEV_: true
     },
     settings: {
         react: {
