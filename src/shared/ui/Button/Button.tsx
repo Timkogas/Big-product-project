@@ -8,14 +8,14 @@ export enum ThemeButton {
 
 type ButtonProps = {
   className?: string
-  theme: ThemeButton
+  theme?: ThemeButton
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
 export const Button: FC<ButtonProps> = props => {
   const {
     className,
     children,
-    theme,
+    theme = ThemeButton.CLEAR,
     ...otherProps
   } = props
   return (

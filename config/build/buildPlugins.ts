@@ -15,9 +15,9 @@ export function buildPlugins ({ paths, isDev }: BuildOptions): webpack.WebpackPl
       chunkFilename: 'css/[name].[contenthash:8].css'
     }),
     new webpack.DefinePlugin({
-      __IS_DEV__: JSON.stringify(isDev)
+      _IS_DEV_: JSON.stringify(isDev)
     }),
-    new ReactRefreshWebpackPlugin(),
+    new ReactRefreshWebpackPlugin({ overlay: false }),
     new webpack.HotModuleReplacementPlugin()
   ]
 }
