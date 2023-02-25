@@ -45,6 +45,7 @@ module.exports = {
     '@typescript-eslint/no-misused-promises': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
+    'react/display-name': 'off',
     'i18next/no-literal-string': [
         'error', 
         { 
@@ -68,5 +69,12 @@ module.exports = {
             'i18next/no-literal-string': 'off',
         },
     },
+    {
+      files: ['**/src/**/*.stories.{ts,tsx}'],
+      rules: {
+        '@typescript-eslint/consistent-type-assertions': 'off',
+        'react/jsx-props-no-spreading': 'off',
+      },
+  },
 ],
 }

@@ -43,6 +43,6 @@
     "./src/**/*.ts",
     "./src/**/*.tsx",
     "./config/**/*.ts",
-    "./config/**/*.tsx",
+    "./config/**/*.tsx", "config/storybook/preview.js", "config/storybook/main.js",
   ]
 }

@@ -3,7 +3,9 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './Button.module.scss'
 
 export enum ThemeButton {
+  DEFAULT = 'default',
   CLEAR = 'clear',
+  OUTLINE = 'outline'
 }
 
 type ButtonProps = {
@@ -15,7 +17,7 @@ export const Button: FC<ButtonProps> = props => {
   const {
     className,
     children,
-    theme = ThemeButton.CLEAR,
+    theme = ThemeButton.DEFAULT,
     ...otherProps
   } = props
   return (
