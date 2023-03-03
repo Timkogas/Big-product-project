@@ -9,8 +9,6 @@ module.exports = {
     'standard-with-typescript',
     'plugin:i18next/recommended'
   ],
-  overrides: [
-  ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -41,17 +39,17 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
     'n/handle-callback-err': 'off',
-    '@typescript-eslint/strict-boolean-expressions': 'warn',
+    '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/no-misused-promises': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
     'react/display-name': 'off',
     'i18next/no-literal-string': [
-        'error', 
-        { 
-            markupOnly: true, 
-            ignoreAttribute: ['to', 'data-testid'] 
-        }]
+      'error',
+      {
+        markupOnly: true,
+        ignoreAttribute: ['to', 'data-testid']
+      }]
 
   },
   globals: {
@@ -64,17 +62,17 @@ module.exports = {
   },
   overrides: [
     {
-        files: ['**/src/**/*.test.{ts,tsx}'],
-        rules: {
-            'i18next/no-literal-string': 'off',
-        },
+      files: ['**/src/**/*.test.{ts,tsx}'],
+      rules: {
+        'i18next/no-literal-string': 'off'
+      }
     },
     {
       files: ['**/src/**/*.stories.{ts,tsx}'],
       rules: {
         '@typescript-eslint/consistent-type-assertions': 'off',
-        'react/jsx-props-no-spreading': 'off',
-      },
-  },
-],
+        'react/jsx-props-no-spreading': 'off'
+      }
+    }
+  ]
 }
