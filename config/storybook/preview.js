@@ -1,8 +1,8 @@
 import { addDecorator } from '@storybook/react'
 import { RouterDecorator } from '../../src/shared/config/storyBook/RouterDecorator/RouterDecorator'
 import { StyleDecorator } from '../../src/shared/config/storyBook/StyleDecorator/StyleDecorator'
-import { ThemeProviderDecorator } from '../../src/shared/config/storyBook/ThemeProviderDecorator/ThemeProviderDecorator';
-import { withThemes } from 'storybook-addon-themes/react';
+import { ThemeProviderDecorator } from '../../src/shared/config/storyBook/ThemeProviderDecorator/ThemeProviderDecorator'
+import { withThemes } from 'storybook-addon-themes/react'
 
 import i18n from './i18next.js'
 
@@ -17,18 +17,18 @@ export const parameters = {
   themes: {
     default: 'light',
     list: [
-      { name: 'light', class: ['app', 'light'], color: '#e8e8ea' },
-      { name: 'dark', class: ['app', 'dark'], color: '#090949' }
-    ],
+      { name: 'light', class: ['app', 'app_light_theme'], color: '#e8e8ea' },
+      { name: 'dark', class: ['app', 'app_dark_theme'], color: '#090949' }
+    ]
   },
   i18n,
-  locale: "en",
+  locale: 'en',
   locales: {
-    en: "English",
-    ru: "Russian",
-  },
+    en: 'English',
+    ru: 'Russian'
+  }
 }
-addDecorator(withThemes);
+addDecorator(withThemes)
 addDecorator(StyleDecorator)
 addDecorator(RouterDecorator)
 addDecorator(ThemeProviderDecorator)
