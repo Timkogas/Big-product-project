@@ -4,7 +4,7 @@ import 'app/styles/index.scss'
 
 export const ThemeDecorator = (theme: Theme) => (StoryComponent: Story) => {
   return (
-      <div className={`app ${theme}`}>
+      <div className={`${theme}`}>
           <StoryComponent/>
       </div>
   )
