@@ -37,6 +37,7 @@
 }
 
 .closed {
-    pointer-events: none;
-    transition: 0.3s ease;
+    .content {
+        transform: scale(0.3);
+    }
 }
