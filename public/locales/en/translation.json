@@ -14,5 +14,8 @@
   "Увеличить": "Increment",
   "Уменьшить": "Decrement",
   "Пароль": "Password",
-  "Юзернейм": "Username"
+  "Юзернейм": "Username",
+  "Форма авторизации": "Authorization form",
+  "Вы ввели неверный пароль или логин": "Incorrect password or login",
+  "Выйти": "Logout"
 }
