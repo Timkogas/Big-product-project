@@ -88,7 +88,7 @@ jobs:
       - name: install modules
         run: npm i
       - name: Set up Docker
-        uses: docker/setup-docker@v2 
+        uses: docker/setup-docker@v2 # Добавляем этот шаг для установки Docker
       - name: build production project
         run: npm run build:prod
       - name: build storybook
