@@ -19,6 +19,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: install modules
         run: npm i
+        # run: npm ci
       - name: Cache deps
         uses: actions/cache@v3
         with:
@@ -69,8 +70,8 @@ jobs:
       - name: unit testing
         run: npm run test:unit
 
-  storybook:  
-    runs-on: macos-latest
+  storybook:
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [17.x]
@@ -91,9 +92,5 @@ jobs:
         run: npm run build:prod
       - name: build storybook
         run: npm run storybook:build
-      - name: Install Docker
-        run: |
-          curl -fsSL https://get.docker.com -o get-docker.sh
-          sh get-docker.sh
       - name: screenshot testing
         run: npm run test:ui:ci
