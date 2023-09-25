@@ -91,5 +91,9 @@ jobs:
         run: npm run build:prod
       - name: build storybook
         run: npm run storybook:build
+      - name: Install Docker
+        run: |
+          curl -fsSL https://get.docker.com -o get-docker.sh
+          sh get-docker.sh
       - name: screenshot testing
         run: npm run test:ui:ci
